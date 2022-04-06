@@ -15,6 +15,7 @@ router.get('/', (req,res) =>{
 router.post ('/', (req, res) => {
     const newItem = new Item ({
       name : req.body.name,
+      _id : req.body._id,
   });
   newItem.save()
         .then( (item: any) => res.json(item) )
